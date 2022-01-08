@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+   <html>
+   <head>
+    <link rel="stylesheet" href="ushani.css">
+	<link rel="stylesheet"
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+   </head>
+   <body>
+
+   <div id="sideNav">
+       <nav>
+       <ul>
+           <li><a href="#banner">HOME</a></li>
+           <li><a href="#feature">MISSION</a></li>
+           <li><a href="#service">FACILITES</a></li>
+           <li><a href="#testimonial">RULES</a></li>
+           <li><a href="#footer">MEET US</a></li>
+       </ul>
+       </nav>
+   </div>
+   <div id="menuBtn">
+       <img src="images.png" id="menu">
+   </div>
+   
+   <script>
+       var menuBtn = document.getElementById("menuBtn")
+       var sideNav = document.getElementById("sideNav")
+       var menu = document.getElementById("menu")
+       
+       sideNav.style.right = "-240px";
+       
+       menuBtn.onclick = function(){
+           if(sideNav.style.right == "-240px"){
+               sideNav.style.right = "0";
+               menu.src = "close2.png";
+           }
+           else{
+               sideNav.style.right = "-240px";
+               menu.src = "images.png";
+           }
+       }	
+       
+       var scroll = new SmoothScroll('a[href*="#"]', {
+           speed: 1000,
+           speedAsDuration: true
+       });
+               
+       </script>
+   
+   </body>
+   </html>
+   
